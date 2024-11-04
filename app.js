@@ -37,14 +37,17 @@ function verifyIfExistsBook(request, response, next) {
 // Definindo uma rota para criar um novo livro
 app.post("/api/cadastrar-livro", (request, response) => {
 
+  // Receber as informações do livro no body da requisição
   const { title, description, authors, ISBN, categories, rating } = request.body;
 
+  // Verifica se o livro já existe de acordo ao parâmetro ISBN, por ser único
   const bookAlreadyExists = books.some((book) => book.ISBN === ISBN);
 
   if (bookAlreadyExists) {
     return response.status(400).json({ error: "Book already exists!" });
   }
 
+  // Armazena o livro no array
   books.push({
     id: uuidv4(),
     title,
@@ -63,16 +66,21 @@ app.post("/api/cadastrar-livro", (request, response) => {
 // O id é um parâmetro de rota
 app.put('/api/atualizar-livro/:id', (request, response) => {
 
+  //  Pegar o id da rota, que é o parâmetro da rota
   const { id } = request.params;
 
+  // Recebe as novas informações do livro no body da requisição
   const { title, description, authors, ISBN, categories, rating } = request.body;
 
+  // Buscar o índice do array do livro onde id da rota é igual ao id armazenando
   const bookIndex = books.findIndex(book => book.id === id);
 
+  // Verifica se o livro existe, pelo índice do array
   if (bookIndex === -1) {
     return response.status(400).json({ error: "Book not found!" });
   }
 
+  // Atualiza as informações do livro no array, pelo índice encontrado
   books[bookIndex] = {
     id,
     title,
@@ -84,6 +92,7 @@ app.put('/api/atualizar-livro/:id', (request, response) => {
     updateddAt: new Date()
   };
 
+  // Retorna a lista de livros atualizada
   return response.status(200).send(books);
 });
 
@@ -99,6 +108,7 @@ app.delete('/api/excluir-livro/:id', (request, response) => {
     return response.status(400).json({ error: "Book not found!" });
   }
 
+  // Exclui o livro da lista, pelo índice encontrado
   books.splice(bookIndex, 1);
 
   return response.status(200).send({ message: "Book deleted seccessfully" });
