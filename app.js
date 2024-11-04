@@ -76,6 +76,24 @@ app.put('/api/atualizar-livro/:id', (request, response) => {
   return response.status(200).send(books);
 });
 
+// Definindo rota para deletar/excluir um livro específico
+// O id é um parâmetro de rota
+app.delete('/api/excluir-livro/:id', (request, response) => {
+
+  const { id } = request.params;
+
+  const bookIndex = books.findIndex(book => book.id === id);
+
+  if (bookIndex === -1) {
+    return response.status(400).json({ error: "Book not found!" });
+  }
+
+  // Exclui o livro da lista, pelo índice encontrado
+  books.splice(bookIndex, 1);
+
+  return response.status(200).send({ message: "Book deleted seccessfully" });
+});
+
 // Definindo uma rota para o endpoint /livros, busca todos os livros cadastrados
 app.get('/api/livros', (request, response) => {
 
