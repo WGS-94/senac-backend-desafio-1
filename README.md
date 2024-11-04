@@ -99,33 +99,26 @@ o A API deve estar configurada para rodar na porta 5000
 
 ## 🧰 Tecnologias e Bibliotecas
 
-* [Nodejs](https://pt-br.reactjs.org/tutorial/tutorial.html)
-  * [Styled Component](https://www.npmjs.com/package/styled-components)
-  * [Axios](https://www.npmjs.com/package/axios)
-  * [React Modal](https://www.npmjs.com/package/react-modal)
-  * [Polished](https://www.npmjs.com/package/polished)
-  * [Phosphor-Icons](https://phosphoricons.com/)
-* [React-Toastify](https://www.npmjs.com/package/react-toastify)
-
+* [Nodejs](https://nodejs.org/en/download/package-manager)
+* [uuid](https://www.npmjs.com/package/uuid)
+* [nodemon](https://www.npmjs.com/package/nodemon)
 
 ### Tools para criar API
  * [NodeJS](https://nodejs.org/en/)
 
-### Banco de Dados
-* [MongoDB](https://www.mongodb.com/pt-br)
-
 ## ⚙️ Rodando o Projeto
 ```bash
 # Clone este repositório para a pasta anterior
-$ git clone https://github.com/WGS-94/SIG-Repositories
+$ git clone https://github.com/WGS-94/senac-backend-desafio-1.git
 # ou use a opção de download.
-# Acesse a pasta SIG-Repositories
-# Acesse a pastas BackEnd-SIG-Repo e FrontEnd-SIG-Repo
-# Terminal 1            Terminal 2
-$ cd BackEnd-SIG-Repo   cd FrontEnd-SIG-Repo
+# Acesse a senac-backend-desafio-1
+# Terminal
+$ cd senac-backend-desafio-1
 # Instale as dependências
-$ yarn install
-ou
 $ npm install
+ou
+$ yarn install
 # Executando o Projeto
-$ yarn dev 
+$ npm dev 
+ou
+$ yarn dev
