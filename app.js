@@ -12,9 +12,14 @@ app.use(express.json());
 // Declarar um array vazio para armazenar os livros
 const books = [];
 
+<<<<<<< HEAD
 // FUNÇÕES
 
 // Middleware
+=======
+// Middleware
+
+>>>>>>> 10516985ca48d2efe07365659a97bd221e3f3a55
 // Função para verificar se livro já existe
 function verifyIfExistsBook(request, response, next) {
 

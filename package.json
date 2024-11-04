@@ -1,6 +1,10 @@
 {
   "name": "senac-backend-desafio-1",
   "version": "1.0.0",
+<<<<<<< HEAD
+=======
+  "author": "Wilson",
+>>>>>>> 10516985ca48d2efe07365659a97bd221e3f3a55
   "description": "Desafio de Seleção para Desenvolvedor Backend da Talentinhos Top Master!",
   "main": "index.js",
   "scripts": {
@@ -8,7 +12,10 @@
     "start": "node app.js"
   },
   "keywords": [],
+<<<<<<< HEAD
   "author": "Wilson",
+=======
+>>>>>>> 10516985ca48d2efe07365659a97bd221e3f3a55
   "license": "ISC",
   "dependencies": {
     "express": "^4.21.1",
@@ -17,4 +24,8 @@
   "devDependencies": {
     "nodemon": "^3.1.7"
   }
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> 10516985ca48d2efe07365659a97bd221e3f3a55
