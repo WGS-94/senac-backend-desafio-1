@@ -12,6 +12,25 @@ app.use(express.json());
 // Declarar um array vazio para armazenar os livros
 const books = [];
 
+// Middleware
+
+// Função para verificar se livro já existe
+function verifyIfExistsBook(request, response, next) {
+
+  const { ISBN } = request.headers;
+
+  const bookExists = books.find(book => book.ISBN === ISBN);
+
+  if (!bookExists) {
+    return response.status(400).json({ error: "Book not found!" });
+  }
+
+  request.bookExists = bookExists;
+
+  return next();
+
+}
+
 // ROUTAS
 
 // Definindo uma rota para criar um novo livro
