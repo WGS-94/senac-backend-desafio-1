@@ -42,6 +42,40 @@ app.post("/api/cadastrar-livro", (request, response) => {
   return response.status(201).send(books);
 });
 
+// Definido rota para atualizar um livro específico
+// O id é um parâmetro de rota
+app.put('/api/atualizar-livro/:id', (request, response) => {
+
+  //  Pegar o id da rota, que é o parâmetro da rota
+  const { id } = request.params;
+
+  // Recebe as novas informações do livro no body da requisição
+  const { title, description, authors, ISBN, categories, rating } = request.body;
+
+  // Buscar o índice do array do livro onde id da rota é igual ao id armazenando
+  const bookIndex = books.findIndex(book => book.id === id);
+
+  // Verifica se o livro existe, pelo índice do array
+  if (bookIndex === -1) {
+    return response.status(400).json({ error: "Book not found!" });
+  }
+
+  // Atualiza as informações do livro no array, pelo índice encontrado
+  books[bookIndex] = {
+    id,
+    title,
+    description,
+    authors,
+    ISBN,
+    categories,
+    rating,
+    updateddAt: new Date()
+  };
+
+  // Retorna a lista de livros atualizada
+  return response.status(200).send(books);
+});
+
 // Definindo uma rota para o endpoint /livros, busca todos os livros cadastrados
 app.get('/api/livros', (request, response) => {
 
