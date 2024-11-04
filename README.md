@@ -54,86 +54,52 @@ o A API deve estar configurada para rodar na porta 5000
 
 ## 🖼️ Testes das rotas no insomnia
 
-### Login
+### Cadastrar livros
 
 <!-- Logotipo -->
 <div align="center">
   <img src="./assets/Cadastrar Livro.png">
 </div>
 
-<div align="center">
-  <img src="https://user-images.githubusercontent.com/87288949/202943317-6cd92a93-3412-4a8f-9a0b-b5e61fc8a276.PNG">
-</div>
-
-### Validação
+### Buscar todos os livros armazenados
 
 <div align="center">
-  <img src="https://user-images.githubusercontent.com/87288949/202943327-1cecf634-86ee-437c-8f25-4832b1b4d9db.PNG">
+  <img src="./assets//Buscar todos livros.png">
 </div>
 
-### Criar conta
+### Atualizar livro específico
 
 <div align="center">
-  <img src="https://user-images.githubusercontent.com/87288949/202943324-56c3b259-2e19-420f-8637-ff7b07ccc231.PNG">
+    <img src="./assets/Atualizar Livro.png">
 </div>
 
-### Início
+### Excluir livro específico
 
 <div align="center">
-  <img src="https://user-images.githubusercontent.com/87288949/202943315-e6df8642-9157-4246-bf39-5a2b20225583.PNG">
+    <img src="./assets/Excluir Livro.png">
 </div>
 
-### Adicionar respositório
+### Buscar livro específico pelo ID ou ISBN
 
 <div align="center">
-  <img src="https://user-images.githubusercontent.com/87288949/202943308-520c8d4c-761e-4550-a587-cbd16d75763c.PNG">
+    <img src="./assets/Buscar pelo ID.png">
 </div>
 
-### Notificação após cadastrar respositório
+### Livro não encontrado ao tentar atualizar
 
 <div align="center">
-  <img src="https://user-images.githubusercontent.com/87288949/202943322-cf3ecc23-c458-4179-b0b5-fe55d4c3f128.PNG">
+    <img src="./assets/Not found.png">
 </div>
 
-### Repositório cadastrado com sucesso
+### Livro não encontrato ao tentar buscar pelo ID
 
 <div align="center">
-  <img src="https://user-images.githubusercontent.com/87288949/202943328-095854c7-3fe0-4eb2-ba0f-2c56f6af6b8b.PNG">
+    <img src="./assets/Not found 2.png">
 </div>
-
-### Excluir repositório
-
-<div align="center">
-  <img src="https://user-images.githubusercontent.com/87288949/202943312-03be2761-9ca8-40ad-8274-36f3ea1ded3b.PNG">
-</div>
-
-### Pesquisar repositório
-
-<div align="center">
-  <img src="https://user-images.githubusercontent.com/87288949/202943325-bfd5bc22-204a-4c68-b39e-202b179cb28a.PNG">
-</div>
-
-### Repositório não encontrado
-
-<div align="center">
-  <img src="https://user-images.githubusercontent.com/87288949/202943320-4aba2d91-3ce9-43f6-9944-92745ce6d24a.PNG">
-</div>
-
-### Cadastrar um repositório existente
-
-<div align="center">
-  <img src="https://user-images.githubusercontent.com/87288949/202944636-1231f55f-b27f-4f63-ad85-f9842317eb28.PNG">
-</div>
-
-<!--
-<div align="center">
-  <img src="https://user-images.githubusercontent.com/87288949/202935078-acda0356-c205-430a-9cc5-3fa54f1c84be.gif">
-</div>
--->
 
 ## 🧰 Tecnologias e Bibliotecas
 
-* [ReactJS](https://pt-br.reactjs.org/tutorial/tutorial.html)
+* [Nodejs](https://pt-br.reactjs.org/tutorial/tutorial.html)
   * [Styled Component](https://www.npmjs.com/package/styled-components)
   * [Axios](https://www.npmjs.com/package/axios)
   * [React Modal](https://www.npmjs.com/package/react-modal)
