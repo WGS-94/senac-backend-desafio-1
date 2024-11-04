@@ -42,6 +42,28 @@ app.post("/api/cadastrar-livro", (request, response) => {
   return response.status(201).send(books);
 });
 
+// Definindo uma rota para o endpoint /livros, busca todos os livros cadastrados
+app.get('/api/livros', (request, response) => {
+
+  // const { books } = request;
+
+  return response.status(200).json(books);
+});
+
+// Definindo uma rota para buscar livro pelo ID ou ISBN
+app.get('/api/livros/:id', (request, response) => {
+
+  const { id } = request.params;
+
+  const bookIndex = books.findIndex(book => book.id === id);
+
+  if (bookIndex === -1) {
+    return response.status(400).json({ error: "Book not found!" });
+  }
+
+  return response.status(200).json(books[bookIndex]);
+});
+
 // Iniciar o servidor para ouvir na porta 5000
 app.listen(5000, () => {
   console.log('Servidor rodando na porta 5000...');
